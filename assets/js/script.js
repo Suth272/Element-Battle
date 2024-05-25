@@ -21,6 +21,7 @@ function play(playerChoice) {
                 } else {
                     result = 'YOU LOSE!';
                 }
+                break
             case 'air':
                 if (computerChoice === 'earth') {
                     result = 'YOU WIN!';
@@ -29,6 +30,7 @@ function play(playerChoice) {
                 } else {
                     result = 'YOU LOSE!';
                 }
+                break
             case 'earth':
                 if (computerChoice === 'water') {
                     result = 'YOU WIN!';
@@ -37,6 +39,7 @@ function play(playerChoice) {
                 } else {
                     result = 'YOU LOSE!';
                 }
+                break
             case 'water':
                 if (computerChoice === 'fire') {
                     result = 'YOU WIN!';
@@ -45,7 +48,11 @@ function play(playerChoice) {
                 } else {
                     result = 'YOU LOSE!';
                 }
+                break
         }
     }
-    
+
+    playerChose.textContent = 'Player chose: ' + playerChoice;
+    computerChose.textContent = 'Computer chose: ' + computerChoice;
+    resultDisplay.textContent = result
 }
