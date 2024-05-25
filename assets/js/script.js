@@ -56,6 +56,10 @@ function play(playerChoice) {
     computerChose.textContent = 'Computer chose: ' + computerChoice;
     resultDisplay.textContent = result;
 
+    resultDisplay.removeAttribute('class', 'greenText');
+    resultDisplay.removeAttribute('class', 'redText');
+
+
     switch (result) {
         case 'YOU WIN!':
             resultDisplay.setAttribute('class', 'greenText');
