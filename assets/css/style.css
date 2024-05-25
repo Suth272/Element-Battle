@@ -56,10 +56,18 @@ h1 {
     margin: 40px 0px;
 }
 
-.greenText {
+.scores {
+    font-size: 3rem;
+}
+
+.greenText, #playerScore {
     color: green;
 }
 
-.redText {
+.redText, #computerScore {
     color: red;
+}
+
+.brownText, #drawScore { 
+    color: rgb(119, 78, 49);
 }

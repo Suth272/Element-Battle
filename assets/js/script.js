@@ -3,6 +3,12 @@ let choices = ['fire', 'air', 'earth', 'water'];
 let playerChose = document.getElementById('playerChose');
 let computerChose = document.getElementById('computerChose');
 let resultDisplay = document.getElementById('resultDisplay');
+let playerScore = document.getElementById('playerScore');
+let computerScore = document.getElementById('computerScore');
+let drawScore = document.getElementById('drawScore');
+let pScore = 0;
+let cScore = 0;
+let dScore = 0;
 
 function play(playerChoice) {
     //Generates computer's choice
@@ -63,9 +69,19 @@ function play(playerChoice) {
     switch (result) {
         case 'YOU WIN!':
             resultDisplay.setAttribute('class', 'greenText');
+            pScore ++;
+            playerScore.textContent = pScore;
             break;
         case 'YOU LOSE!':
             resultDisplay.setAttribute('class', 'redText');
+            cScore ++;
+            computerScore.textContent = cScore;
+            break;
+        case "IT'S A TIE!":
+            resultDisplay.setAttribute('class', 'brownText');
+            dScore ++;
+            drawScore.textContent = dScore;
             break;
     }
+
 }
