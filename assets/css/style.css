@@ -54,5 +54,12 @@ h1 {
 #resultDisplay {
     font-size: 5rem;
     margin: 40px 0px;
-    color: rgb(223, 208, 184);
+}
+
+.greenText {
+    color: green;
+}
+
+.redText {
+    color: red;
 }
