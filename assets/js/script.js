@@ -58,10 +58,10 @@ function play(playerChoice) {
 
     switch (result) {
         case 'YOU WIN!':
-            resultDisplay.classList.add(greenText);
+            resultDisplay.setAttribute('class', 'greenText');
             break;
         case 'YOU LOSE!':
-            resultDisplay.classList.add(redText);
+            resultDisplay.setAttribute('class', 'redText');
             break;
     }
 }
