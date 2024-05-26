@@ -69,17 +69,17 @@ function play(playerChoice) {
     switch (result) {
         case 'YOU WIN!':
             resultDisplay.setAttribute('class', 'greenText');
-            pScore ++;
+            pScore++;
             playerScore.textContent = pScore;
             break;
         case 'YOU LOSE!':
             resultDisplay.setAttribute('class', 'redText');
-            cScore ++;
+            cScore++;
             computerScore.textContent = cScore;
             break;
         case "IT'S A TIE!":
             resultDisplay.setAttribute('class', 'brownText');
-            dScore ++;
+            dScore++;
             drawScore.textContent = dScore;
             break;
     }
