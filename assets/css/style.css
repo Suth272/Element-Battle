@@ -1,29 +1,58 @@
+html {
+    min-height: 100%;
+    position: relative;
+    margin: 0;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     margin: 0;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     background-color: rgb(21, 52, 72);
+    width: 100%;
+    min-height: 100vh;
 }
 
-h1 {
-    font-size: 5rem;
+header {
+    font-size: 2vw;
     color: rgb(223, 208, 184);
     font-style: italic;
     text-transform: uppercase;
     border-bottom: 3px solid rgb(223, 208, 184);
+    text-align: center;
+    width: 100%;
+}
+
+.game-area {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    text-align: center;
+    top: 80px;
+    padding-bottom: 5px;
+}
+
+#rules {
+    font-style: italic;
+}
+
+#rules h3 {
+    border-bottom: 1px solid rgb(223, 208, 184);
 }
 
 .choices {
     margin-bottom: 25px;
+    text-align: center;
 }
 
 .choices button {
-    font-size: 7rem;
+    font-size: 7vw;
     min-width: 160px;
-    margin: 0 15px;
+    margin: 15px;
     border-radius: 25%;
     background-color: rgb(148, 137, 121);
     transition: background-colour 1s ease;
@@ -45,29 +74,37 @@ h1 {
     background-color: rgb(167, 199, 231);
 }
 
-#playerChose, #computerChose {
-    font-size: 3rem;
+#playerChose,
+#computerChose {
+    font-size: 3vw;
     margin: 10px 0px;
     color: rgb(223, 208, 184);
 }
 
+.lightbrowntext {
+    color: rgb(223, 208, 184);
+}
+
 #resultDisplay {
-    font-size: 5rem;
+    font-size: 5vw;
     margin: 40px 0px;
 }
 
 .scores {
-    font-size: 3rem;
+    font-size: 3vw;
 }
 
-.greenText, #playerScore {
+.greenText,
+#playerScore {
     color: green;
 }
 
-.redText, #computerScore {
+.redText,
+#computerScore {
     color: red;
 }
 
-.brownText, #drawScore { 
+.brownText,
+#drawScore {
     color: rgb(119, 78, 49);
 }

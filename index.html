@@ -1,49 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Element Battle</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <h1>Element Battle</h1>
-    
-    <div class="choices">
-        <button onclick="play('fire')" id="fire"><i class="fa-solid fa-fire"></i></button>
-        <button onclick="play('air')" id="air"><i class="fa-solid fa-wind"></i></button>
-        <button onclick="play('earth')" id="earth"><i class="fa-solid fa-gem"></i></button>
-        <button onclick="play('water')" id="water"><i class="fa-solid fa-water"></i></button>
 
-    </div>
+    <header>
+        <h1>Element Battle</h1>
+    </header>
 
-    <div id="playerChose">
-        PLAYER CHOSE:
-    </div>
+    <section class="game-area">
 
-    <div id="computerChose">
-        COMPUTER CHOSE:
-    </div>
+        <div id="rules" class="lightbrowntext">
+            <h3>RULES!</h3>
+            <p>Fire is weak to Water | Water is weak to Earth | Earth is weak to Air | Air is weak to Fire</p>
+            <p>Fire and Earth don't affect each other | Air and Water don't affect each other</p>
+        </div>
 
-    <div id="resultDisplay">
-    </div>
+        <div class="choices">
+            <button aria-label="Fire" onclick="play('fire')" id="fire"><i class="fa-solid fa-fire"></i></button>
+            <button aria-label="Air" onclick="play('air')" id="air"><i class="fa-solid fa-wind"></i></button>
+            <button aria-label="Earth" onclick="play('earth')" id="earth"><i class="fa-solid fa-gem"></i></button>
+            <button aria-label="Water" onclick="play('water')" id="water"><i class="fa-solid fa-water"></i></button>
 
-    <div class="scores">
-        <span>Player score:</span>
-        <span id="playerScore">0</span>
-    </div>
+        </div>
 
-    <div class="scores">
-        <span>Computer score:</span>
-        <span id="computerScore">0</span>
-    </div>
+        <div id="playerChose">
+            PLAYER CHOSE:
+        </div>
 
-    <div class="scores">
-        <span>Draws:</span>
-        <span id="drawScore">0</span>
-    </div>
+        <div id="computerChose">
+            COMPUTER CHOSE:
+        </div>
+
+        <div id="resultDisplay">
+        </div>
+
+        <div class="scores">
+            <span class="lightbrowntext">Player score:</span>
+            <span id="playerScore">0</span>
+        </div>
+
+        <div class="scores">
+            <span class="lightbrowntext">Computer score:</span>
+            <span id="computerScore">0</span>
+        </div>
+
+        <div class="scores">
+            <span class="lightbrowntext">Draws:</span>
+            <span id="drawScore">0</span>
+        </div>
+    </section>
 
     <script src="https://kit.fontawesome.com/29850fee30.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
