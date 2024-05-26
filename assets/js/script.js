@@ -12,7 +12,7 @@ let dScore = 0;
 
 function play(playerChoice) {
     //Generates computer's choice
-    let computerChoice = choices[Math.floor(Math.random() * 4)]
+    let computerChoice = choices[Math.floor(Math.random() * 4)];
     let result = '';
     //Deciding who wins
     if (playerChoice === computerChoice) {
