@@ -1,4 +1,4 @@
-//Establishing variables
+// Establishing variables
 let choices = ['fire', 'air', 'earth', 'water'];
 let playerChose = document.getElementById('playerChose');
 let computerChose = document.getElementById('computerChose');
@@ -12,20 +12,25 @@ let pScore = 0;
 let cScore = 0;
 let dScore = 0;
 
-//Load sound effects
+// Load sound effects
 let winSound = new Audio('assets/sounds/victorymale-version-230553.mp3');
 let loseSound = new Audio('assets/sounds/you-lose-game-sound-230514.mp3');
 let tieSound = new Audio('assets/sounds/woosh-230554.mp3');
 let selectSound = new Audio('assets/sounds/walkman-button-272973.mp3');
 
 function play(playerChoice) {
+
+    // Disable all buttons to prevent spamming
+    disableButtons();
+
     // Stop and reset the previous sound before playing the button sound
     selectSound.pause();
     selectSound.currentTime = 0;
     selectSound.play();
 
     // Wait for the button sound to finish before playing the result sound
-    selectSound.onended = function() {
+    selectSound.onended = function () {
+
         //Generates computer's choice and sets the result variable to be blank
         let computerChoice = choices[Math.floor(Math.random() * 4)];
         let result = '';
@@ -81,29 +86,52 @@ function play(playerChoice) {
 
         // Resets the result classes and adds animations
         resultDisplay.classList.remove('greenText', 'redText', 'brownText', 'animate');
-        void resultDisplay.offsetWidth;  // Trigger reflow for animation restart
+        void resultDisplay.offsetWidth; // Trigger reflow for animation restart
         resultDisplay.classList.add('animate');
 
         // Updates the scoreboard, telling the user who won and plays the appropiate sound
+        let resultSound;
         switch (result) {
             case 'YOU WIN!':
                 resultDisplay.classList.add('greenText');
                 pScore++;
                 playerScore.textContent = pScore;
-                winSound.play();
+                resultSound = winSound;
                 break;
             case 'YOU LOSE!':
                 resultDisplay.classList.add('redText');
                 cScore++;
                 computerScore.textContent = cScore;
-                loseSound.play();
+                resultSound = loseSound;
                 break;
             case "IT'S A TIE!":
                 resultDisplay.classList.add('brownText');
                 dScore++;
                 drawScore.textContent = dScore;
-                tieSound.play();
+                resultSound = tieSound;
                 break;
         }
-    }
+
+        // Play the result sound and re-enable buttons after it finishes
+        resultSound.pause();
+        resultSound.currentTime = 0;
+        resultSound.play();
+        resultSound.onended = enableButtons; // Re-enable buttons after the sound finishes
+    };
+}
+
+// Function to disable all buttons
+function disableButtons() {
+    const buttons = document.querySelectorAll('.choices button');
+    buttons.forEach((button) => {
+        button.disabled = true;
+    });
+}
+
+// Function to enable all buttons
+function enableButtons() {
+    const buttons = document.querySelectorAll('.choices button');
+    buttons.forEach((button) => {
+        button.disabled = false;
+    });
 }
