@@ -6,15 +6,19 @@ let resultDisplay = document.getElementById('resultDisplay');
 let playerScore = document.getElementById('playerScore');
 let computerScore = document.getElementById('computerScore');
 let drawScore = document.getElementById('drawScore');
+
+// Setting the scores
 let pScore = 0;
 let cScore = 0;
 let dScore = 0;
 
 function play(playerChoice) {
+
     //Generates computer's choice
     let computerChoice = choices[Math.floor(Math.random() * 4)];
     let result = '';
-    //Deciding who wins
+    
+    // Defining the rules and comparing the player's choice to the computer's choice and deciding who wins according to the rules
     if (playerChoice === computerChoice) {
         result = "IT'S A TIE!";
     } else {
@@ -58,6 +62,7 @@ function play(playerChoice) {
         }
     }
 
+    // Displaying what the player chose and what the computer chose
     playerChose.textContent = 'Player chose: ' + playerChoice;
     computerChose.textContent = 'Computer chose: ' + computerChoice;
     resultDisplay.textContent = result;
@@ -65,7 +70,7 @@ function play(playerChoice) {
     resultDisplay.removeAttribute('class', 'greenText');
     resultDisplay.removeAttribute('class', 'redText');
 
-
+    // Updates the scoreboard
     switch (result) {
         case 'YOU WIN!':
             resultDisplay.setAttribute('class', 'greenText');
