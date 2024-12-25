@@ -18,7 +18,7 @@ function play(playerChoice) {
     let computerChoice = choices[Math.floor(Math.random() * 4)];
     let result = '';
     
-    // Defining the rules and comparing the player's choice to the computer's choice and deciding who wins according to the rules
+    // Defining the rules and comparing the player's choice to the computer's choice, as well as determining game result
     if (playerChoice === computerChoice) {
         result = "IT'S A TIE!";
     } else {
@@ -62,13 +62,13 @@ function play(playerChoice) {
         }
     }
 
-    // Displaying what the player chose and what the computer chose
+    // Updating the elements with choices and results
     playerChose.textContent = 'Player chose: ' + playerChoice;
     computerChose.textContent = 'Computer chose: ' + computerChoice;
     resultDisplay.textContent = result;
 
-    resultDisplay.removeAttribute('class', 'greenText');
-    resultDisplay.removeAttribute('class', 'redText');
+    // Resets the result classes
+    resultDisplay.removeAttribute('class');
 
     // Updates the scoreboard
     switch (result) {
