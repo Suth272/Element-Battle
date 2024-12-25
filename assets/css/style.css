@@ -106,6 +106,21 @@ header p {
     transform: scale(1.1);
 }
 
+/* Button hover and click effects */
+.choices button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.choices button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+.choices button:active {
+    transform: scale(0.9);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+}
+
 /* Styling for choice and result displays */
 #playerChose,
 #computerChose {
