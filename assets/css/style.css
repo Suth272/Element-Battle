@@ -1,3 +1,4 @@
+/* General styles for the webpage */
 html {
     min-height: 100%;
     position: relative;
@@ -16,6 +17,7 @@ body {
     min-height: 100vh;
 }
 
+/* Header styling */
 header {
     font-size: 2vw;
     color: rgb(223, 208, 184);
@@ -26,6 +28,7 @@ header {
     width: 100%;
 }
 
+/* Styling for the game area */
 .game-area {
     width: 75%;
     margin-left: auto;
@@ -36,6 +39,7 @@ header {
     padding-bottom: 5px;
 }
 
+/* Rules section */
 #rules {
     font-style: italic;
 }
@@ -44,6 +48,7 @@ header {
     border-bottom: 1px solid rgb(223, 208, 184);
 }
 
+/* Choice buttons */
 .choices {
     margin-bottom: 25px;
     text-align: center;
@@ -58,6 +63,7 @@ header {
     transition: background-colour 1s ease;
 }
 
+/* Hover effects for choice buttons */
 #fire:hover {
     background-color: rgb(169, 66, 63);
 }
@@ -74,6 +80,7 @@ header {
     background-color: rgb(167, 199, 231);
 }
 
+/* Styling for choice and result displays */
 #playerChose,
 #computerChose {
     font-size: 3vw;
@@ -90,6 +97,7 @@ header {
     margin: 40px 0px;
 }
 
+/* Scoreboard styling */
 .scores {
     font-size: 3vw;
 }
