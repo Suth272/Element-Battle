@@ -2,10 +2,21 @@
 <html lang="en">
 
 <head>
+    <!-- Metadata for search engines and social media -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Element Battle - A fun game of strategy and elements!">
+    <meta name="keywords" content="game, elements, fire, water, earth, air">
+    <meta property="og:title" content="Element Battle">
+    <meta property="og:description" content="A thrilling game of strategy with elemental powers.">
+
+    <!--Page Title-->
     <title>Element Battle</title>
+
+    <!--Link to extrernal style sheet-->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -15,17 +26,20 @@
 <body>
 
     <header>
+        <!-- Main heading of the webpage -->
         <h1>Element Battle</h1>
+        <p>A game of strategy and elements</p>
     </header>
 
     <section class="game-area">
-
+        <!-- Rules section to display game rules -->
         <div id="rules" class="lightbrowntext">
             <h3>RULES!</h3>
             <p>Fire is weak to Water | Water is weak to Earth | Earth is weak to Air | Air is weak to Fire</p>
             <p>Fire and Earth don't affect each other | Air and Water don't affect each other</p>
         </div>
 
+        <!-- Buttons for player to choose an element -->
         <div class="choices">
             <button aria-label="Fire" onclick="play('fire')" id="fire"><i class="fa-solid fa-fire"></i></button>
             <button aria-label="Air" onclick="play('air')" id="air"><i class="fa-solid fa-wind"></i></button>
@@ -34,6 +48,7 @@
 
         </div>
 
+        <!-- Display areas for choices and results -->
         <div id="playerChose">
             PLAYER CHOSE:
         </div>
@@ -45,6 +60,7 @@
         <div id="resultDisplay">
         </div>
 
+        <!-- Scoreboard displaying the scores -->
         <div class="scores">
             <span class="lightbrowntext">Player score:</span>
             <span id="playerScore">0</span>
@@ -61,7 +77,10 @@
         </div>
     </section>
 
+    <!-- FontAwesome script for icons -->
     <script src="https://kit.fontawesome.com/29850fee30.js" crossorigin="anonymous"></script>
+
+    <!-- Link to external JavaScript file -->
     <script src="assets/js/script.js"></script>
 </body>
 
