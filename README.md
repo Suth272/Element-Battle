@@ -27,11 +27,11 @@ The rules section clearly explains how each element matches up against each othe
 ![image](https://github.com/Suth272/Element-Battle/assets/159195438/0ce5cf51-69cf-4409-9340-86c22eb72569)
 
 ### The Game Options
-The game options has a choice of options for the user to choose from to pick against the computer, which are: Fire, Water, Earth and Air. These buttons are interactable, meaning the user can click on them to make their choice. Not to mention the buttons change colour to the respected elemental colours when the user hovers over them.
+The game options has a choice of options for the user to choose from to pick against the computer, which are: Fire, Water, Earth and Air. These buttons are interactable, meaning the user can click on them to make their choice. Not to mention the buttons change colour to the respected elemental colours when the user hovers over them, as well as having an animation and playing a sound when clicked on. The buttons will also be temporarily disabled until the result of the round is revealed, to prevent the user from spamming the buttons and not allowing a result to be decided.
 ![image](https://github.com/Suth272/Element-Battle/assets/159195438/258882b8-4a7a-48a0-bafe-16efb6fdac97)
 
 ### The Game Results
-The game results show a range of results that the user/player can easily read, which include the options that the player and computer picked, as well as who won the battle/round. This section also includes a scoreboard, where the player can see how many times they or the computer have won, as well as the number of times they have got a tie/draw. The computer's results are randomly chosen by the computer using a Javascript code.
+The game results show a range of results that the user/player can easily read, which include the options that the player and computer picked. The round winner can also be seen here, being revealed with a small animation and a sound being played depending on the result of the round. This section also includes a scoreboard, where the player can see how many times they or the computer have won, as well as the number of times they have got a tie/draw. The computer's results are randomly chosen by the computer using a Javascript code.
 ![image](https://github.com/Suth272/Element-Battle/assets/159195438/082950e2-8d73-40c8-876c-94ec715c6b33)
 
 
@@ -66,6 +66,8 @@ This section shows the successful tests from different code validators.
 - [x] Looks good on Mobile, Tablet and Desktop
 - [x] Confirmed that the header, rules, game options and game results are easy to read.
 - [x] Confirmed that the colours and fonts chosen are easy to read and accesiblle by running it through lighthouse in the devtools, which can be seen the accessbility testing.
+- [x] Confirmed that the sounds are correctly played according to the event that occurs, with no overlapping of the sounds.
+- [x] Confirmed that the anti-spam function work correctly.
 
 ## Defect Tracking
 While coding the website, defects have occured throughout the build, which I have fixed as the project progressed. All the defects have been recorded in GitHub Issues. They can also be seen in the screenshots below.
@@ -75,6 +77,9 @@ While coding the website, defects have occured throughout the build, which I hav
 
 ### Issue 2:
 ![image](https://github.com/Suth272/Element-Battle/assets/159195438/37df994b-c134-484d-921a-78eaf965ad4e)
+
+### Issue 3:
+![image](https://github.com/user-attachments/assets/59e7fc7a-05bf-4a0b-a052-ecb5ed93a6fe)
 
 ## Outstanding Defects
 There are no outstanding defects in the code/site.
@@ -108,3 +113,8 @@ The site was deployed to GitHub Pages
 ## Media
 + Icon for the website - [Favicon](https://favicon.io/favicon-generator/)
 + Icons inside the webpage - [Font Awesome](https://fontawesome.com)
++ The sounds have been taken from [Pixabay](https://pixabay.com/sound-effects/), with the individual links to the sounds can be seen below:
+    - You Win sound effect - [Victory](https://pixabay.com/sound-effects/victorymale-version-230553/)
+    - You Lose sound effect - [You Lose](https://pixabay.com/sound-effects/you-lose-game-sound-230514/)
+    - Its a Tie sound effect - [woosh](https://pixabay.com/sound-effects/woosh-230554/)
+    - Button select sound effect - [WalkmanButton](https://pixabay.com/sound-effects/walkman-button-272973/)
