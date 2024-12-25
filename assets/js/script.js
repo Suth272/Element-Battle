@@ -12,7 +12,15 @@ let pScore = 0;
 let cScore = 0;
 let dScore = 0;
 
+//Load sound effects
+let winSound = new Audio('assets\sounds\win.mp3');
+let loseSound = new Audio('assets\sounds\lose.mp3');
+let tieSound = new Audio('assets\sounds\tie.mp3');
+let selectSound = new Audio('assets\sounds\select.mp3');
+
 function play(playerChoice) {
+
+    selectSound.play();
 
     //Generates computer's choice
     let computerChoice = choices[Math.floor(Math.random() * 4)];
@@ -78,16 +86,19 @@ function play(playerChoice) {
             resultDisplay.classList.add('greenText');
             pScore++;
             playerScore.textContent = pScore;
+            winSound.play();
             break;
         case 'YOU LOSE!':
             resultDisplay.classList.add('redText');
             cScore++;
             computerScore.textContent = cScore;
+            loseSound.play();
             break;
         case "IT'S A TIE!":
             resultDisplay.classList.add('brownText');
             dScore++;
             drawScore.textContent = dScore;
+            tieSound.play();
             break;
     }
 
