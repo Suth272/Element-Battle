@@ -52,10 +52,19 @@ header p {
 /* Rules section */
 #rules {
     font-style: italic;
+    color: rgb(223, 208, 184);
+    margin-bottom: 20px;
 }
 
 #rules h3 {
     border-bottom: 1px solid rgb(223, 208, 184);
+    font-size: 1.5vw;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+#rules p {
+    margin: 5px 0;
 }
 
 /* Choice buttons */
@@ -71,23 +80,30 @@ header p {
     border-radius: 25%;
     background-color: rgb(148, 137, 121);
     transition: background-colour 1s ease;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
 }
 
 /* Hover effects for choice buttons */
 #fire:hover {
     background-color: rgb(169, 66, 63);
+    transform: scale(1.1);
 }
 
 #air:hover {
     background-color: rgb(253, 253, 253);
+    transform: scale(1.1);
 }
 
 #earth:hover {
     background-color: rgb(119, 78, 49);
+    transform: scale(1.1);
 }
 
 #water:hover {
     background-color: rgb(167, 199, 231);
+    transform: scale(1.1);
 }
 
 /* Styling for choice and result displays */
