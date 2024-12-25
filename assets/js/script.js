@@ -67,23 +67,25 @@ function play(playerChoice) {
     computerChose.textContent = 'Computer chose: ' + computerChoice;
     resultDisplay.textContent = result;
 
-    // Resets the result classes
-    resultDisplay.removeAttribute('class');
+    // Resets the result classes and adds animations
+    resultDisplay.classList.remove('greenText', 'redText', 'brownText', 'animate');
+    void resultDisplay.offsetWidth; // Trigger reflow for animation restart
+    resultDisplay.classList.add('animate');
 
     // Updates the scoreboard
     switch (result) {
         case 'YOU WIN!':
-            resultDisplay.setAttribute('class', 'greenText');
+            resultDisplay.classList.add('greenText');
             pScore++;
             playerScore.textContent = pScore;
             break;
         case 'YOU LOSE!':
-            resultDisplay.setAttribute('class', 'redText');
+            resultDisplay.classList.add('redText');
             cScore++;
             computerScore.textContent = cScore;
             break;
         case "IT'S A TIE!":
-            resultDisplay.setAttribute('class', 'brownText');
+            resultDisplay.classList.add('brownText');
             dScore++;
             drawScore.textContent = dScore;
             break;
